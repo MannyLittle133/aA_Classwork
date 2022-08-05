@@ -11,15 +11,15 @@
 //     // your code here...
 //   }
 
-// var num = 33; 
-// if (num > 7) {
-//   console.log('true');
-// } else if (num < 57) {
-//   console.log('');
-// } else {
+var num = 33; 
+if (num > 7) {
+  console.log('true');
+} else if (num < 57) {
+  console.log('');
+} else {
 
-//   console.log(0);
-// }
+  console.log(0);
+}
 
 
 
@@ -52,18 +52,21 @@
 // plusFive(-8);  // => -3
 //
 
-function plusFive(num) {
-    return num + 5
-  }
+// function plusFive(num) {
+//     return num + 5
+//   }
 
-let something = plusFive(100)
-console.log(something)
-console.log(plusFive(100))
+// let something = plusFive(100)
+// console.log(something)
+// console.log(plusFive(100))
 
-// console.log("i am the best programmer in the world")
+// // console.log("i am the best programmer in the world")
 
-function water(name) {
-    // This is where we define what water will do 
-    console.log(name + " is the best programmer in the world")
-}
-water("cornell")
+// function water(name) {
+//     // This is where we define what water will do 
+//     console.log(name + " is a bad dog but we love her")
+// }
+// water("cassie")
+
+
+
