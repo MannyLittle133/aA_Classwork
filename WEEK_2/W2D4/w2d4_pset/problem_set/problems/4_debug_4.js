@@ -12,7 +12,7 @@ var magicify = function(number) {
 var isMagicNumer = function(number) {
   var magicNumb = magicify(number);
 
-  if (magicNumb % 13 !== 0 || magicNumb < 0) {
+  if (magicNumb % 13 === 0 || magicNumb < 0) {
     return true;
   }
 

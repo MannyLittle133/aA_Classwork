@@ -20,10 +20,28 @@ var arr2 = [
 
 twoDimensionalSize(arr2); // => 5
 ***********************************************************************/
+// i should be counting all of the elements
+// init a count variable
+// set up a nested loop
 
 function twoDimensionalSize(array) {
+let count = 0
 
+  for (let i = 0; i < array.length; i++) {
+    console.log(array[i])
+    let innerArray = array[i]
+    for (let j = 0; j < innerArray.length; j++) {
+      count ++;
+    }
+  }
 }
 
+
+var arr2 = [
+  ['a'],
+  ['b', 'c', 'd', 'e']
+];
+
+console.log(twoDimensionalSize(arr2))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = twoDimensionalSize;

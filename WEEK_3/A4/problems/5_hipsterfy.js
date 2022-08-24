@@ -10,11 +10,25 @@ hipsterfy("towel flicker banana"); // => "towl flickr banan"
 hipsterfy("runner anaconda"); // => "runnr anacond"
 hipsterfy("turtle cheeseburger fries"); // => "turtl cheeseburgr fris"
 *******************************************************************************/
-
 function hipsterfy(sentence) {
-  // your code here...
+
 
 }
+
+function removeVowels(word) {
+  
+}
+
+
+
+
+
+
+console.log(hipsterfy("proper")); // => "propr"
+console.log(hipsterfy("proper tonic panther")); // => "propr tonc panthr"
+console.log(hipsterfy("towel flicker banana")); // => "towl flickr banan"
+console.log(hipsterfy("runner anaconda")); // => "runnr anacond"
+console.log(hipsterfy("turtle cheeseburger fries")); // => "turtl cheeseburgr fris"
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 module.exports = hipsterfy;

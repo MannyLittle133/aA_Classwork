@@ -10,10 +10,14 @@ multiples(15, 3) => [ 3, 6, 9, 12 ]
 
 function multiples(max, num){
     let newNums = []
-    for (let i = 0; i < max; i++) {
+    for (let i = num; i < max; i += num) {
+        // if (max %  === 0)
+         newNums.push(i)
         
     }
+    return newNums
 }
 console.log(multiples(10, 2))
+console.log(multiples(15, 3))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 module.exports = multiples;

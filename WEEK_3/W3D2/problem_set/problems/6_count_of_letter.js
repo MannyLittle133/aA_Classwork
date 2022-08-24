@@ -17,15 +17,10 @@ function countOfLetter(string, char) {
     for (let i = 0; i < newStr.length; i++) {
         if (char.includes(newStr[i])) {
             counter += 1
-
         }
-
-
-
     }
     return counter;
 }
-
 console.log(countOfLetter('mississippi', 's')); // => 4
 console.log(countOfLetter('MISSISSIPPI', 'p')); // => 2
 console.log(countOfLetter('BOOTCAMP', 't')); // => 1

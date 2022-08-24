@@ -37,8 +37,53 @@ titleize("shall we dance?", ["dance"])
 ***********************************************************************/
 
 function titleize(title, stopWords) {
+    let words = title.split(' ');
+    let punc = '.,?!;';
+    let newSen = []
+
+
+    for (let i = 0; i < words.length; i++) {
+        let word = words[i];
+        if (punc.includes(word[word.length - 1])) {
+            puncChar = word[word.length - 1]
+            word = removePunctuation(word)
+        }
+        if (isStopWord(word, stopWords)) {
+            newWord = word.toLowerCase();
+        } else {
+            newWord = word[0].toUpperCase() + word.slice(1).toLowerCase();
+        }
+        newWord += puncChar;
+        newSen.push(newWord)
+    }
+
+    return newSen.join(' ')
 
 }
 
+function isStopWord(word, stopWords) {
+    let lowerCasedWord = word.toLowerCase();
+    return stopWords.includes(lowerCasedWord);
+}
+
+
+function removePunctuation(word) {
+    let newWord = word.slice(0, word.length)
+    return newWord;
+}
+
+
+
+(0, word.length)
+// let punc = '., !, ?,'
+
+
+// word = 'dance?' 
+
+// newWord = word.slice(0, word.length - 1)
+
+// console.log(newWord)
+
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
-module.exports = titleize;
+// module.exports = titleize;

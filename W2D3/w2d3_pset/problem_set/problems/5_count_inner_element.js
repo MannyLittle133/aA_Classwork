@@ -22,10 +22,29 @@ how many times each element in each sub array repeats.
 
 // countInnerElement(arr2) // => {a: 4, b: 2, c: 2, d: 2}
 ***********************************************************************/
-
+//i notice that the inner arrays are of different lengths
+//init an object to be returned 
+//i know i need to use the same counting pattern
 
 function countInnerElement(arr) {
-  
+
+    let obj = {}
+
+    for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i])
+        let innerArr = arr[i]
+        for (let j = 0; j < innerArr.length; j++) {
+            console.log(innerArr[j])
+            let ele = innerArray[j];
+            if (obj[ele] === undefined) {
+                obj [ele] = 1
+            } else {
+                obj[ele] +=1
+            }
+        }
+
+    }
+    return obj;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
