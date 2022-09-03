@@ -17,7 +17,7 @@ function bubbleSort(arr) {
 console.log(bubbleSort([5, 3, 21, 6, 7, 52, 71, 8]))
 
 
-// MERGE SORT
+// MERGE SORT //O(nlog(n)) // linearythmic
 
 function mergeSort(arr) {
     if (arr.length <= 1) return arr;
@@ -56,9 +56,9 @@ function quickSort(arr) {
 
 console.log(quickSort([5, 3, 21, 6, 7, 52, 71, 8]))
 
-// BINARY SEARCH
+// BINARY SEARCH // array must be sorted in order to work// array must be sorted 
 
-function binarySearch(arr, target) {
+function binarySearch(arr, target) { // O of log of N // logirythmic time
     if (arr.length === 0) return -1
     let mid = Math.floor(arr.length / 2)
     let left = arr.slice(0 , mid) 
@@ -76,3 +76,28 @@ function binarySearch(arr, target) {
 }
 
 console.log(binarySearch(quickSort([5, 3, 21, 6, 7, 52, 71, 8]), 52))
+
+function isUniqueAnagram(word1, word2) { // O(n * m)
+    if (word1.length !== word2.length) {
+        return false
+    }
+
+    for (let i = 0; i < word1.length; i++) {
+        let letter = word1[i]
+
+        if (word2.indexOf(letter) === -1) {
+            return false
+        }
+    }
+    return true
+}
+
+function anagrams(word1, word2) { // multiplicative constant // O of 2N
+    if (word1.length !== word2.length) return false;
+    let obj = {}
+
+    for (let i = 0; i < word1.length; i++)
+        
+    
+}
+   
