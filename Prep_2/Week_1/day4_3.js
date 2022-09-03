@@ -96,8 +96,28 @@ function anagrams(word1, word2) { // multiplicative constant // O of 2N
     if (word1.length !== word2.length) return false;
     let obj = {}
 
-    for (let i = 0; i < word1.length; i++)
+    for (let i = 0; i < word1.length; i++) {
+
+    }
         
     
 }
-   
+
+
+const fib = (n) => { //
+    if (n === 1 || n === 2) return 1
+    return fib(n - 1) + fib(n - 2)
+}
+
+console.log(fib(8))
+
+//memoization
+
+const fibs = (n, memo = {}) => {
+    if (n === 1 || n === 2) return 1;
+    if (memo[n]) return memo[n];
+    memo[n] = fibs(n - 1, memo) + fibs(n - 2, memo)
+    return memo[n]
+}
+
+console.log(fibs(90))
