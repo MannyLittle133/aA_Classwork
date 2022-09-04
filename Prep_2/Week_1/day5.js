@@ -28,7 +28,7 @@ function quickSort(arr) {
     return left.concat([pivot], right)
 }
 
-console.log(quickSort([5, 3, 21, 6, 7, 52, 71, 8]))
+// console.log(quickSort([5, 3, 21, 6, 7, 52, 71, 8]))
 
 function quickSort(arr) {
     if (arr.length <= 1) return arr;
@@ -52,8 +52,25 @@ function quickSort(arr) {
     if (arr.length <= 1) return arr;
     let pivot = arr.shift()
     let left = quickSort(arr.filter(ele => ele <= pivot))
-    let right = quickSort(arr.filter(ele => ele < pivot))
+    let right = quickSort(arr.filter(ele => ele > pivot))
     return left.concat([pivot], right)
 }
 
 
+
+function quickSort(arr) {
+    if (arr.length <= 1) return arr;
+    let pivot = arr.shift()
+    let left = quickSort(arr.filter(ele => ele <= pivot))
+    let right = quickSort(arr.filter(ele => ele > pivot))
+    return left.concat([pivot], right)
+}
+
+
+function quickSort(arr) {
+    if (arr.length <= 1) return arr;
+    let pivot = arr.shift()
+    let left = quickSort(arr.filter(ele => ele <= pivot))
+    let right = quickSort(arr.filter(ele => ele > pivot))
+    return left.concat([pivot], right)
+}
