@@ -97,9 +97,14 @@ function anagrams(word1, word2) { // multiplicative constant // O of 2N
     let obj = {}
 
     for (let i = 0; i < word1.length; i++) {
+        let char = word1[i]
+
+        if (word2.indexof(char)=== -1) {
+            return false
+        }
 
     }
-        
+    return true
     
 }
 
