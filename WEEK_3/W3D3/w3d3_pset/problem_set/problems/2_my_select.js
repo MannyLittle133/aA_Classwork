@@ -26,8 +26,22 @@ parameters to the callback. This allows us to create a versatile
 ***********************************************************************/
 
 function mySelect(arr, cb) {
+  let selected = []
 
+  for (let idx = 0; idx < arr.length; idx++) {
+    let ele = arr[idx]
+    if (cb(ele, idx, arr)) {
+      selected.push(ele)
+    }
+
+  }
+  return selected
 }
+function isEven(num) {
+  return num % 2 === 0;
+}
+
+console.log(mySelect([1,2,3,4,5,6], isEven)); // => [ 2, 4, 6 ]
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = mySelect;
