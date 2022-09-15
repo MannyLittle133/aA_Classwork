@@ -23,10 +23,10 @@ result2; // => [ 2, 4, 8 ]
 
 function mySelect(arr, cb) {
   let newArr = []
-  for (let i = 0; i < arr.length; i++) {
-    if (cb(arr[i], i, arr) === true) {
+  for (let idx = 0; idx < arr.length; idx++) {
+    if (cb(arr[idx], idx, arr) === true) {
 
-      newArr.push(arr[i])
+      newArr.push(arr[idx])
     }
   }
 

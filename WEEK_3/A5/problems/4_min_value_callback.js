@@ -19,7 +19,10 @@ minValueCallback(array2, double); // => 18
 *******************************************************************************/
 
 function minValueCallback(array, cb) {
-  return cb()
+  for (let idx = 0; idx < array.lenghth; idx++) {
+    let ele = array[idx]
+    
+  }
 }
 
 
