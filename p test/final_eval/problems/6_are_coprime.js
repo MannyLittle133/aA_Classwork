@@ -19,22 +19,38 @@ Difficulty: Medium
 *************************************************************************************/
 
 function areCoprime(num1, num2) {
-  
-}
-
-function isPrime(num) {
-  if (num < 2) {
-    return false
+  // let smallest = num1 < num2 ? num1 : num2;
+  let smallest;
+  if (num1 < num2) {
+    smallest = num1;
+  } else {
+    smallest = num2;
   }
-  for (let i = 2; i < num; i++) {
-    if (num % i === 0) {
+
+  for (let i = 2; i <= smallest; i++){
+
+    if (num1 % i === 0 && num2 % i === 0)  {
       return false
     }
   }
-  return true
+
+  return true;
 }
 
-console.log(isPrime(7))
+// function isPrime(num) {
+//   if (num < 2) {
+//     return false
+//   }
+//   for (let i = 2; i < num; i++) {
+//     if (num % i === 0) {
+//       return false
+//     }
+//   }
+//   return true
+// }
+
+console.log(areCoprime(15, 14)); // => true
+console.log(areCoprime(14, 21)); // => false
 /******************** DO NOT MODIFY ANYTHING UNDER THIS LINE *************************/
 
 module.exports = areCoprime;

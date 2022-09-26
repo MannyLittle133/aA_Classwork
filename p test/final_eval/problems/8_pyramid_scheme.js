@@ -45,11 +45,11 @@ Difficulty: Hard
 *************************************************************************************/
 
 function pyramidScheme(base) {
-  let numArr = [base] //create an array with the base included
+  let numArr = [base]
 
-  while (numArr[0].length > 1) { // if the array at the 0th index has a length greater than 1
-    let nextLayer = arraySums(numArr[0]) // variable named next layer uses the function array sums to get the sum of the array at the 0th index
-    numArr.unshift(nextLayer) // pushes the next array of numbers to the front of the array
+  while (numArr[0] > 1) {
+    let nextLayer = arraySums(numArr[0])
+    numArr.unshift(nextLayer)
   }
   return numArr
 }
@@ -59,7 +59,7 @@ function arraySums(arr) {
   let sumArr = []
 
   for (let i = 0; i < arr.length-1; i++) {
-    sumArr.push(arr[i] + arr[i+1]) // the first number of the index plus the number after (2 + 3) (3 + 7) (7 + 5)....
+    sumArr.push(arr[i] + arr[i+1])
   }
   return sumArr
 }
@@ -71,37 +71,20 @@ console.log(pyramidScheme([2, 2, 2, 2]))
 module.exports = pyramidScheme;
 
 
+// let numArr = [base] //create an array with the base included
 
-
-
-// function pyramidScheme(base) {
-//   let numArr = [base] 
-//   // [
-//    // [16]
-//   //  [8,8],
-//   // [4,4,4],
-//   //[2,2,2,2]
-//   // ]
-//   while(numArr[0].length > 1){
-//     let nextLayer = arraySums(numArr[0]) //[16]
-//     numArr.unshift(nextLayer) // [[8,8], [4,4,4], [2, 2, 2, 2]]
+//   while (numArr[0].length > 1) { // if the array at the 0th index has a length greater than 1
+//     let nextLayer = arraySums(numArr[0]) // variable named next layer uses the function array sums to get the sum of the array at the 0th index
+//     numArr.unshift(nextLayer) // pushes the next array of numbers to the front of the array
 //   }
-
 //   return numArr
-   
-  
-
 // }
-// pyramidScheme([ 2, 3, 7, 5, 9 ])
+
 
 // function arraySums(arr) {
-//   newArr = [] // 5, 10, 12, 14
-//   // arr = [ 2, 3, 7, 5, 9 ]
-//   for (let i = 0; i < arr.length -1; i++) {
-//     // i = 3
-//     newArr.push(arr[i] + arr[i+1])
+//   let sumArr = []
 
-    
+//   for (let i = 0; i < arr.length-1; i++) {
+//     sumArr.push(arr[i] + arr[i+1]) // the first number of the index plus the number after (2 + 3) (3 + 7) (7 + 5)....
 //   }
-//   return newArr
-// }
+//   return sumArr
