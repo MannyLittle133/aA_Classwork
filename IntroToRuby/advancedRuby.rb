@@ -248,13 +248,183 @@
 # # 4
 # # 5
 
-def to_initials(name)
-	names = name.split(' ')
-  	initials = ''
-  	names.each { |names| initials += names[0]}
-  	return initials
+# def to_initials(name)
+# 	names = name.split(' ')
+#   	initials = ''
+#   	names.each { |firstLast| initials += firstLast[0]}
+#   	return initials
+# end
+
+# puts to_initials("Kelvin Bridges")      # => "KB"
+# puts to_initials("Michaela Yamamoto")   # => "MY"
+# puts to_initials("Mary La Grange")      # => "MLG"
+
+# def first_in_array(arr, el1, el2)
+# 	if arr.index(el1) < arr.index(el2)
+#       return el1
+#     else
+#       return el2
+#     end
+
+#     # p arr.index(el2)
+# end
+
+# puts first_in_array(["a", "b", "c", "d"], "d", "b"); # => "b"
+# puts first_in_array(["cat", "bird" ,"dog", "mouse" ], "dog", "mouse"); # => "dog"
+
+# def abbreviate_sentence(sent)
+# 	words = sent.split(' ')
+#   	voweless = []
+  
+#   words.each do |word|
+#     newWord = abbreviate_word(word)
+#     if word.length > 4
+#       voweless << newWord
+#     else 
+#       voweless << word
+#     end
+#   end
+#   return voweless.join(' ')
+# end
+
+# def abbreviate_word(word)
+# 	vowels = 'aeiou'
+#   new_word = ''
+  
+#   word.each_char do |char|
+#     if !vowels.include?(char)
+#       new_word += char
+#     end
+#   end
+#   return new_word
+# end
+# puts abbreviate_sentence("follow the yellow brick road") # => "fllw the yllw brck road"
+# puts abbreviate_sentence("what a wonderful life")        # => "what a wndrfl life"
+
+# puts !'aeiou'.include?('x')
+
+
+# def abbreviate_sentence(sent)
+#     words = sent.split(' ')
+#     new_sentence = []
+
+#     words.each do |word|
+#         voweless = abbreviate_word(word)
+#         if word.length > 4
+#             new_sentence << voweless
+#         else
+#             new_sentence << word
+#         end
+#     end
+#     return new_sentence.join(' ')
+# end
+
+# def abbreviate_word(word)
+#     vowels = 'aeiou'
+#     new_word = ''
+
+#     word.each_char do |char|
+#         if !vowels.include?(char)
+#             new_word += char
+#         end
+#     end
+#     return new_word
+# end
+
+# puts abbreviate_sentence("follow the yellow brick road") # => "fllw the yllw brck road"
+# puts abbreviate_sentence("what a wonderful life")        # => "what a wndrfl life"
+
+# def abbreviate_sentence(sent)
+#     words = sent.split(' ')
+#     new_sentence = []
+
+#     words.each do |word|
+#         voweless = abbreviate_word(word)
+#         if word.length > 4
+#             new_sentence << voweless
+#         else
+#             new_sentence << word
+#         end
+#     end
+#     return new_sentence.join(' ')
+# end
+
+# def abbreviate_word(word)
+#     vowels = 'aeiou'
+#     new_word = ''
+
+#     word.each_char do |char|
+#         if !vowels.include?(char)
+#             new_word += char
+#         end
+#     end
+#     return new_word
+# end
+
+# puts abbreviate_sentence("follow the yellow brick road") # => "fllw the yllw brck road"
+# puts abbreviate_sentence("what a wonderful life")        # => "what a wndrfl life"
+
+# def abbreviate_sentence(sent)
+#     words = sent.split(' ')
+#     new_sentence = []
+
+#     words.each do |word|
+#         voweless = abbreviate_word(word)
+#         if word.length > 4
+#             new_sentence << voweless
+#         else
+#             new_sentence << word
+#         end
+#     end
+#     return new_sentence.join(' ')
+# end
+
+# def abbreviate_word(word)
+#     vowels = 'aeiou'
+#     new_word = ''
+
+#     word.each_char do |char|
+#         if !vowels.include?(char)
+#             new_word += char
+#         end
+#     end
+#     return new_word
+# end
+
+
+
+# puts abbreviate_sentence("follow the yellow brick road") # => "fllw the yllw brck road"
+# puts abbreviate_sentence("what a wonderful life")        # => "what a wndrfl life"
+
+# Hint: use str.upcase and str.downcase
+# "abc".upcase # => "ABC"
+
+def format_name(str)
+	lower = str.downcase
+  	new_name = ''
+  
+  lower.each do |new_name += parts[0].upcase|
+    
+  
+  
 end
 
-puts to_initials("Kelvin Bridges")      # => "KB"
-puts to_initials("Michaela Yamamoto")   # => "MY"
-puts to_initials("Mary La Grange")      # => "MLG"
+puts format_name("chase WILSON") # => "Chase Wilson"
+puts format_name("brian CrAwFoRd scoTT") # => "Brian Crawford Scott"
+
+# Hint: use str.upcase and str.downcase
+# "abc".upcase # => "ABC"
+
+def format_name(str)
+	parts = str.split(' ')
+  	new_name = []
+  
+  parts.each do |part|
+    
+    new_name << part[0].upcase + part[1..-1].downcase
+  end
+ 	return new_name.join(' ')
+end
+
+puts format_name("chase WILSON") # => "Chase Wilson"
+puts format_name("brian CrAwFoRd scoTT") # => "Brian Crawford Scott"
